@@ -11,26 +11,8 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from Adarsh.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
-from pyrogram.types import ReplyKeyboardMarkup
 
-if MY_PASS:
-            buttonz=ReplyKeyboardMarkup(
-            [
-                ["start⚡️","help📚","login🔑","DC"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
-                        
-            ],
-            resize_keyboard=True
-        )
-else:
-            buttonz=ReplyKeyboardMarkup(
-            [
-                ["start⚡️","help📚","DC"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
-                        
-            ],
-            resize_keyboard=True
-        )
+
 
             
             
@@ -118,7 +100,7 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [ADARSH GOEL](https://github.com/adarsh-goel/-pro/issues).",
+                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [BEARZAP](https://t.me/bearzap).",
                 disable_web_page_preview=True)
             return
     await message.reply_text(
@@ -128,8 +110,8 @@ async def help_handler(bot, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://github.com/adarsh-goel")],
-                [InlineKeyboardButton("💥 Source Code", url="https://github.com/adarsh-goel/-pro/")]
+                [InlineKeyboardButton("💁‍♂️ Owner", url="https://t.me/bearzap")],
+                [InlineKeyboardButton("💥 Server ", url="https://goggle.com")]
             ]
         )
     )
